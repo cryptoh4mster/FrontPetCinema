@@ -4,10 +4,10 @@ async function GetMovies() {
         method: "GET",
         headers: { "Accept": "application/json" }
     });
-    // если запрос прошел нормально
-    if (response.ok === true) {
-        // получаем данные
-        const movies = await response.json();
-        return movies;
-    }
+    const movie = await response.json();
+    //lert(movie);
+    return movie;
 }
+
+
+//GetMovies();

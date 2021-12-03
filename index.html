@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" type="text/javascript"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
-
 <body>
-    <script>
-        //GetMoviesList
-    </script>
-    Movies test app
+    <p>
+        <script>
+            const moviesList = GetMovies().then(value => value);
+            document.write(moviesList[0]);
+            //let a = GetMovies().then(value => alert(value[0].name));
+        </script>
+    </p>
 </body>
 
 </html>
