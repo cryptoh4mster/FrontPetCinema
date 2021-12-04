@@ -1,23 +1,31 @@
-h3{
-    color:red;
+#myHeader {
+    background-color:dimgrey;
+    position: fixed;
+    width:100%;
 }
-.app{
-    font-size: 2rem;
-    font-weight:bold;
-    color: rgb(41,66,112);
+
+#myHeader .container {
+    height: 75px;
 }
+
+#moviesList {
+    background-color:wheat;
+}
+
+#moviesList .container{
+    width: auto;
+    height: 600px;
+}
+
 #myFooter {
     background-color: #182c39;
     color: white;
-    padding-top: 20px;
-    height: 500px;
     flex-direction:column;
 }
 
-
-
 #myFooter .row {
-    margin: 0 85px;
+    margin-left:100px;
+    margin-top:50px;
 }
 
 #myFooter .footer-copyright {
@@ -30,7 +38,6 @@ h3{
 
 #myFooter .footer-copyright p {
     margin: 10px;
-    
     color: rgb(255, 255, 255);
 }
 
@@ -108,25 +115,29 @@ h3{
 }
 
 
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
     -webkit-flex-direction: column;
-    height: 100%;
 }
 
-.content{
+.noheader {
+    margin-left:100px;
+    margin-right:100px;
+}
+
+.content {
    flex: 1 0 auto;
    -webkit-flex: 1 0 auto;
    min-height: 200px;
 }
 
-#myFooter{
+#myFooter {
    flex: 0 0 auto;
    -webkit-flex: 0 0 auto;
 }
