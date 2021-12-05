@@ -5,7 +5,11 @@ class UI {
     ShowMoviesTable(movies) {
         var table = document.getElementById("moviesList").getElementsByClassName("container")[0];
 
-        table.innerHTML += `<p> Фильмы </p>`;
+        table.innerHTML += `
+            <div class="content-description">
+                Фильмы
+            </div>
+        `;
         //table.innerHTML += `<div class="row">`
         var rowsAmount = Math.floor(movies.length / 5);
         var remainder = movies.length - rowsAmount * 5;
@@ -27,8 +31,8 @@ class UI {
             for (var z = 0; z < remainder; z++) {
                 rowOfTable.innerHTML += `
                 <div class="film">
-                    <img src="${movies[z].image}">
-                    <p>${movies[z].name}</p>
+                    <img src="${movies[z + rowsAmount * 5].image}">
+                    <p>${movies[z + rowsAmount * 5].name}</p>
                 </div>
                 `;
             }
@@ -68,7 +72,7 @@ class UI {
     ShowFooter() {
         var footer = document.getElementById("myFooter");
         footer.innerHTML = `
-            < div class="container" >
+            <div class="container" >
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="social-networks">
