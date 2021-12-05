@@ -8,13 +8,73 @@
     height: 75px;
 }
 
-#moviesList {
-    background-color:wheat;
+#myHeader .container .row {
+    height: 75px;
 }
 
-#moviesList .container{
+#myHeader .container .row .element {
+    height: 75px;
+    float: left;
+    width: 200px;   
+    line-height:75px;
+    text-align: center;
+    font-size:12pt;
+}
+
+#myHeader .container .row .element input[type=text] {
+    float: left;
+    border: none;
+    outline: none;
+    border-radius: 3px 0 0 3px;
+    font-size: 17px;
+    height: 30px;
+    margin-top:20px;
+    width:280px;
+  }
+
+  #myHeader .container .row .element button {
+    float: left;
+    border: none;
+    height: 30px;
+    margin-top: 20px;
+    cursor:pointer;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+
+
+#myHeader a {
+    text-decoration: none;
+    color:bisque;
+}
+
+#myHeader a:hover,
+#myHeader a:focus {
+    text-decoration: none;
+}
+
+#moviesList {
+    background-color:wheat;
+    
+}
+
+#moviesList .container {
     width: auto;
     height: 600px;
+}
+
+#moviesList .container .row {
+    height:200px;
+}
+
+#moviesList .container .row .film {
+    padding:20px;
+    float:left;
+}
+
+#moviesList .container .row .film img {
+    width:150px;
+    height:200px;
 }
 
 #myFooter {
@@ -129,6 +189,7 @@ body {
 .noheader {
     margin-left:100px;
     margin-right:100px;
+    margin-top:75px;
 }
 
 .content {
