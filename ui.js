@@ -2,6 +2,36 @@ class UI {
     constructor() {
         this.moviesList = document.getElementById('moviesList');
     }
+    ShowHeader() {
+        var header = document.getElementById("myHeader");
+        header.innerHTML = `
+            <div class="container" >
+                <div class="row">
+                    <div class="element">
+                        <a href="#">Главная</a>
+                    </div>
+                    <div class="element">
+                        <a href="#">Топ 10 фильмов</a>
+                    </div>
+                    <div class="element">
+                        <a href="#">Топ 10 сериалов</a>
+                    </div>
+                    <div class="element" style="width:310px">
+                        <input type="text" placeholder="Поиск фильмов и сериалов..">
+                        <button type ="button">
+                        <a href="#" style="color:black">
+                            <i class ="fa fa-search" style="float:left">
+                            </i>
+                        </a>
+                        </button>
+                    </div>
+                    <div class="element">
+                        <a href="#">Войти</a>
+                    </div>
+                </div>
+            </div >
+            `;
+    }
     ShowMoviesTable(movies) {
         var table = document.getElementById("moviesList").getElementsByClassName("container")[0];
 
@@ -39,35 +69,42 @@ class UI {
         }
 
     }
-    ShowHeader() {
-        var header = document.getElementById("myHeader");
-        header.innerHTML = `
-            <div class="container" >
-                <div class="row">
-                    <div class="element">
-                        <a href="#">Главная</a>
-                    </div>
-                    <div class="element">
-                        <a href="#">Топ 10 фильмов</a>
-                    </div>
-                    <div class="element">
-                        <a href="#">Топ 10 сериалов</a>
-                    </div>
-                    <div class="element" style="width:310px">
-                        <input type="text" placeholder="Поиск фильмов и сериалов..">
-                        <button type ="button">
-                        <a href="#" style="color:black">
-                        <i class ="fa fa-search" style="float:left">
-                        </i>
-                        </a>
-                        </button>
-                    </div>
-                    <div class="element">
-                        <a href="#">Войти</a>
-                    </div>
+    ShowSerialsTable(serials) {
+        var table = document.getElementById("serialsList").getElementsByClassName("container")[0];
+
+        table.innerHTML += `
+            <div class="content-description">
+                Сериалы
+            </div>
+        `;
+        //table.innerHTML += `<div class="row">`
+        var rowsAmount = Math.floor(serials.length / 5);
+        var remainder = serials.length - rowsAmount * 5;
+        for (var i = 0; i < rowsAmount; i++) {
+            table.innerHTML += `<div class="row"></div>`;
+            var rowOfTable = document.getElementById("serialsList").getElementsByClassName("container")[0].getElementsByClassName("row")[i];
+            for (var z = i * 5; z < i * 5 + 5; z++) {
+                rowOfTable.innerHTML += `
+                <div class="serial">
+                    <img src="${serials[z].image}">
+                    <p>${serials[z].name}</p>
                 </div>
-            </div >
-            `;
+                `;
+            }
+        }
+        if (remainder > 0) {
+            table.innerHTML += `<div class="row"></div>`;
+            var rowOfTable = document.getElementById("serialsList").getElementsByClassName("container")[0].getElementsByClassName("row")[rowsAmount];
+            for (var z = 0; z < remainder; z++) {
+                rowOfTable.innerHTML += `
+                <div class="serial">
+                    <img src="${serials[z + rowsAmount * 5].image}">
+                    <p>${serials[z + rowsAmount * 5].name}</p>
+                </div>
+                `;
+            }
+        }
+
     }
     ShowFooter() {
         var footer = document.getElementById("myFooter");

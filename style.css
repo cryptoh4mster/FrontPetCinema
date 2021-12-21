@@ -54,13 +54,11 @@
 }
 
 #moviesList {
-    background-color:wheat;
-    
+    background-color:wheat; 
 }
 
 #moviesList .container {
     width: auto;
-    height: 1200px;
 }
 
 #moviesList .container .content-description {
@@ -74,21 +72,79 @@
 }
 
 #moviesList .container .row {
-    height:200px;
+    height:300px;
     margin-left:100px;
     margin-right:100px;
 }
 
 #moviesList .container .row .film {
-    padding:20px;
+    padding-left:20px;
+    padding-right:20px;
     margin-right:20px;
     float:left;
 }
 
+
 #moviesList .container .row .film img {
     width:150px;
     height:200px;
+    border-radius: 10px;
 }
+
+
+#moviesList .container .row .film p {
+    width:150px;
+    padding-top:5px;
+    font-family: Helvetica, Sans-Serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#serialsList {
+    background-color:wheat; 
+}
+
+#serialsList .container {
+    width: auto;
+}
+
+#serialsList .container .content-description {
+    width: auto;
+    height: 100px;
+    font-size:22pt;
+    color:black;
+    margin-left:120px;
+    line-height:100px;
+
+}
+
+#serialsList .container .row {
+    height:300px;
+    margin-left:100px;
+    margin-right:100px;
+}
+
+#serialsList .container .row .serial {
+    padding-left:20px;
+    padding-right:20px;
+    margin-right:20px;
+    float:left;
+}
+
+#serialsList .container .row .serial img {
+    width:150px;
+    height:200px;
+    border-radius: 10px;
+}
+
+#serialsList .container .row .serial p {
+    width:150px;
+    padding-top:5px;
+    font-family: Helvetica, Sans-Serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
 
 #myFooter {
     background-color: #182c39;
@@ -197,7 +253,6 @@ body {
     display: -webkit-flex;
     flex-direction: column;
     -webkit-flex-direction: column;
-    background-color: black;
 }
 
 .noheader {

@@ -7,4 +7,9 @@ api.GetMovies().then(value => {
     ui.ShowMoviesTable(value);
 });
 
+api.GetSerials().then(value => {
+    ui.ShowSerialsTable(value);
+
+})
+
 ui.ShowFooter();
